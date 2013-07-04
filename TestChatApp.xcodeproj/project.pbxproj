@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38383AA2177B327C0030A0D6 /* libT5Pusher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38383AA1177B327C0030A0D6 /* libT5Pusher.a */; };
 		38AE3FEA177451D6009B9721 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AE3FE9177451D6009B9721 /* UIKit.framework */; };
 		38AE3FEC177451D7009B9721 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AE3FEB177451D6009B9721 /* Foundation.framework */; };
 		38AE3FEE177451D7009B9721 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AE3FED177451D7009B9721 /* CoreGraphics.framework */; };
@@ -19,9 +20,13 @@
 		38AE4003177451D7009B9721 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AE4001177451D7009B9721 /* MainStoryboard_iPhone.storyboard */; };
 		38AE4006177451D7009B9721 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AE4004177451D7009B9721 /* MainStoryboard_iPad.storyboard */; };
 		38AE4009177451D7009B9721 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AE4008177451D7009B9721 /* MainViewController.m */; };
+		38B2C4DA178306FA00BF8DB6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B2C4D9178306FA00BF8DB6 /* LoginViewController.m */; };
+		9D8D6DE7D9E6430BAF21F32E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B75808D80B774922959413A4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38383AA1177B327C0030A0D6 /* libT5Pusher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libT5Pusher.a; path = ../../T5Pusher/build/libT5Pusher.a; sourceTree = "<group>"; };
+		38383AA4177B32870030A0D6 /* T5Pusher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = T5Pusher.h; path = ../../T5Pusher/T5Pusher/T5Pusher.h; sourceTree = "<group>"; };
 		38AE3FE5177451D6009B9721 /* TestChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AE3FE9177451D6009B9721 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		38AE3FEB177451D6009B9721 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +44,10 @@
 		38AE4005177451D7009B9721 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		38AE4007177451D7009B9721 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		38AE4008177451D7009B9721 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		38B2C4D8178306FA00BF8DB6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		38B2C4D9178306FA00BF8DB6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		91A451AE7A9143D2A5CEBD97 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		B75808D80B774922959413A4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +58,8 @@
 				38AE3FEA177451D6009B9721 /* UIKit.framework in Frameworks */,
 				38AE3FEC177451D7009B9721 /* Foundation.framework in Frameworks */,
 				38AE3FEE177451D7009B9721 /* CoreGraphics.framework in Frameworks */,
+				9D8D6DE7D9E6430BAF21F32E /* libPods.a in Frameworks */,
+				38383AA2177B327C0030A0D6 /* libT5Pusher.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +72,7 @@
 				38AE3FEF177451D7009B9721 /* TestChatApp */,
 				38AE3FE8177451D6009B9721 /* Frameworks */,
 				38AE3FE6177451D6009B9721 /* Products */,
+				91A451AE7A9143D2A5CEBD97 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +90,7 @@
 				38AE3FE9177451D6009B9721 /* UIKit.framework */,
 				38AE3FEB177451D6009B9721 /* Foundation.framework */,
 				38AE3FED177451D7009B9721 /* CoreGraphics.framework */,
+				B75808D80B774922959413A4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -85,12 +98,16 @@
 		38AE3FEF177451D7009B9721 /* TestChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				38383AA4177B32870030A0D6 /* T5Pusher.h */,
+				38383AA1177B327C0030A0D6 /* libT5Pusher.a */,
 				38AE3FF8177451D7009B9721 /* MainAppDelegate.h */,
 				38AE3FF9177451D7009B9721 /* MainAppDelegate.m */,
 				38AE4001177451D7009B9721 /* MainStoryboard_iPhone.storyboard */,
 				38AE4004177451D7009B9721 /* MainStoryboard_iPad.storyboard */,
 				38AE4007177451D7009B9721 /* MainViewController.h */,
 				38AE4008177451D7009B9721 /* MainViewController.m */,
+				38B2C4D8178306FA00BF8DB6 /* LoginViewController.h */,
+				38B2C4D9178306FA00BF8DB6 /* LoginViewController.m */,
 				38AE3FF0177451D7009B9721 /* Supporting Files */,
 			);
 			path = TestChatApp;
@@ -117,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38AE400C177451D7009B9721 /* Build configuration list for PBXNativeTarget "TestChatApp" */;
 			buildPhases = (
+				F1B43C91C7764B45808B56B5 /* Check Pods Manifest.lock */,
 				38AE3FE1177451D6009B9721 /* Sources */,
 				38AE3FE2177451D6009B9721 /* Frameworks */,
 				38AE3FE3177451D6009B9721 /* Resources */,
+				F3591F40F16E430E99687E10 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,6 +192,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F1B43C91C7764B45808B56B5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		F3591F40F16E430E99687E10 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38AE3FE1177451D6009B9721 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -181,6 +231,7 @@
 				38AE3FF6177451D7009B9721 /* main.m in Sources */,
 				38AE3FFA177451D7009B9721 /* MainAppDelegate.m in Sources */,
 				38AE4009177451D7009B9721 /* MainViewController.m in Sources */,
+				38B2C4DA178306FA00BF8DB6 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,10 +319,17 @@
 		};
 		38AE400D177451D7009B9721 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91A451AE7A9143D2A5CEBD97 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestChatApp/TestChatApp-Prefix.pch";
 				INFOPLIST_FILE = "TestChatApp/TestChatApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestChatApp\"",
+					"\"$(SRCROOT)/../testLib/build\"",
+					"\"$(SRCROOT)/../T5Pusher/build\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -279,10 +337,17 @@
 		};
 		38AE400E177451D7009B9721 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91A451AE7A9143D2A5CEBD97 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestChatApp/TestChatApp-Prefix.pch";
 				INFOPLIST_FILE = "TestChatApp/TestChatApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestChatApp\"",
+					"\"$(SRCROOT)/../testLib/build\"",
+					"\"$(SRCROOT)/../T5Pusher/build\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -307,6 +372,7 @@
 				38AE400E177451D7009B9721 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
