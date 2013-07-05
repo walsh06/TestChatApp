@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Users.h"
+
 
 @interface LoginViewController : UIViewController{
     UIButton *loginButton;
@@ -17,4 +19,5 @@
 @property (nonatomic, retain) IBOutlet UITextField *nameField;
 @property (nonatomic, retain) IBOutlet UIButton *loginButton;
 @property (nonatomic, retain) IBOutlet UITextField *passwordField;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @end

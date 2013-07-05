@@ -20,4 +20,6 @@
 @property (nonatomic, retain) IBOutlet UIButton *sendButton;
 @property (nonatomic, retain) IBOutlet UIButton *logoutButton;
 
+//-(void)setManageObjectContext:(NSManagedObjectContext *)context;
+-(void)setUserInfo:(NSString *)userName:(NSString *)userPassword;
 @end

@@ -18,6 +18,9 @@
 @synthesize messageView, messageField, sendButton, logoutButton;
 
 T5Pusher *myLib;
+NSString *key;
+NSString *name;
+NSString *password;
 
 -(void)viewDidLoad
 {
@@ -27,8 +30,8 @@ T5Pusher *myLib;
 
     myLib = [T5Pusher alloc];    //creates library instance
     [myLib setPusherUrl:@"http://5985a0af836b42e0b13d5760fcbb96b2.cloudapp.net"];//sets pusher url
-    
-    
+    [myLib useSecureConnection];
+    [myLib setValidUser:true];
     [myLib connectionBind:@"connectedToHub":@"connected"];
     [myLib connectionBind:@"connectionFailed":@"connectionattemptfailed"];
 
@@ -89,10 +92,16 @@ T5Pusher *myLib;
     NSString *messageViewText = [NSString stringWithFormat:@"%@%@\n",messageView.text, [newArray objectAtIndex:0]];
     self.messageView.text = messageViewText;
 }
-
--(void)passKey:(NSString *)uesrKey
+/*
+-(void)setManageObjectContext:(NSManagedObjectContext *)context
 {
-    //key = userKey
+    self.manageObjectContext = context;
+}
+ */
+-(void)setUserInfo:(NSString *)userName:(NSString *)userPassword
+{
+    name = userName;
+    password = userPassword;
 }
 
 @end

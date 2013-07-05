@@ -20,6 +20,9 @@
 		38AE4003177451D7009B9721 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AE4001177451D7009B9721 /* MainStoryboard_iPhone.storyboard */; };
 		38AE4006177451D7009B9721 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AE4004177451D7009B9721 /* MainStoryboard_iPad.storyboard */; };
 		38AE4009177451D7009B9721 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AE4008177451D7009B9721 /* MainViewController.m */; };
+		38B1A4531786BFCC00EF0C7E /* UserDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A4511786BFCC00EF0C7E /* UserDB.xcdatamodeld */; };
+		38B1A4561786C53100EF0C7E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B1A4551786C53100EF0C7E /* CoreData.framework */; };
+		38B1A4591786C65500EF0C7E /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B1A4581786C65400EF0C7E /* Users.m */; };
 		38B2C4DA178306FA00BF8DB6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B2C4D9178306FA00BF8DB6 /* LoginViewController.m */; };
 		9D8D6DE7D9E6430BAF21F32E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B75808D80B774922959413A4 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,10 @@
 		38AE4005177451D7009B9721 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		38AE4007177451D7009B9721 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		38AE4008177451D7009B9721 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		38B1A4521786BFCC00EF0C7E /* UserDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserDB.xcdatamodel; sourceTree = "<group>"; };
+		38B1A4551786C53100EF0C7E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		38B1A4571786C65400EF0C7E /* Users.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Users.h; sourceTree = "<group>"; };
+		38B1A4581786C65400EF0C7E /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		38B2C4D8178306FA00BF8DB6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		38B2C4D9178306FA00BF8DB6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		91A451AE7A9143D2A5CEBD97 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B1A4561786C53100EF0C7E /* CoreData.framework in Frameworks */,
 				38AE3FEA177451D6009B9721 /* UIKit.framework in Frameworks */,
 				38AE3FEC177451D7009B9721 /* Foundation.framework in Frameworks */,
 				38AE3FEE177451D7009B9721 /* CoreGraphics.framework in Frameworks */,
@@ -69,6 +77,7 @@
 		38AE3FDA177451D6009B9721 = {
 			isa = PBXGroup;
 			children = (
+				38B1A4551786C53100EF0C7E /* CoreData.framework */,
 				38AE3FEF177451D7009B9721 /* TestChatApp */,
 				38AE3FE8177451D6009B9721 /* Frameworks */,
 				38AE3FE6177451D6009B9721 /* Products */,
@@ -108,7 +117,10 @@
 				38AE4008177451D7009B9721 /* MainViewController.m */,
 				38B2C4D8178306FA00BF8DB6 /* LoginViewController.h */,
 				38B2C4D9178306FA00BF8DB6 /* LoginViewController.m */,
+				38B1A4511786BFCC00EF0C7E /* UserDB.xcdatamodeld */,
 				38AE3FF0177451D7009B9721 /* Supporting Files */,
+				38B1A4571786C65400EF0C7E /* Users.h */,
+				38B1A4581786C65400EF0C7E /* Users.m */,
 			);
 			path = TestChatApp;
 			sourceTree = "<group>";
@@ -232,6 +244,8 @@
 				38AE3FFA177451D7009B9721 /* MainAppDelegate.m in Sources */,
 				38AE4009177451D7009B9721 /* MainViewController.m in Sources */,
 				38B2C4DA178306FA00BF8DB6 /* LoginViewController.m in Sources */,
+				38B1A4531786BFCC00EF0C7E /* UserDB.xcdatamodeld in Sources */,
+				38B1A4591786C65500EF0C7E /* Users.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +389,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		38B1A4511786BFCC00EF0C7E /* UserDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				38B1A4521786BFCC00EF0C7E /* UserDB.xcdatamodel */,
+			);
+			currentVersion = 38B1A4521786BFCC00EF0C7E /* UserDB.xcdatamodel */;
+			path = UserDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 38AE3FDC177451D6009B9721 /* Project object */;
 }

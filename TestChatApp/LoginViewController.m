@@ -7,24 +7,27 @@
 //
 
 #import "LoginViewController.h"
+#import "MainViewController.h"
+
+#import "Users.h"
+
+
 
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
-@synthesize loginButton, nameField, passwordField;
+@synthesize loginButton, nameField, passwordField, managedObjectContext;
 
-NSString *key;
-
-/*
 //send the name entered to chatView
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    mainViewController *mainView = segue.destinationViewController;
-    [mainView passKey:key];
+    MainViewController *mainView = segue.destinationViewController;
+    [mainView setUserInfo:nameField.text:passwordField.text];
+    //[mainView setManageObjectContext:self.managedObjectContext];
 }
-*/
+
 
 //checks if a name is entered
 - (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
@@ -33,17 +36,28 @@ NSString *key;
     {
         //NSString *name = nameField.text;
         //NSString *password = passwordField.text;
-          
-        /*
-        VALIDATION OF USER IS HERE
-         
-         if valid
-            return true
-         else
-            return false
-        */
         
-        return true;
+        
+       NSManagedObjectContext *context = [self managedObjectContext];
+        
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Users" inManagedObjectContext:context];
+        
+        [fetchRequest setEntity:entity];
+        NSError *error = nil;
+        NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+        
+        for(Users *user in fetchedObjects)
+        {
+                if([nameField.text isEqualToString:user.name] && [passwordField.text isEqualToString:user.password])
+                {
+                    return true;
+                }
+        }
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed Login" message:@"Incorrect name and password combination" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        return false;
     }
     else
     {
@@ -73,6 +87,9 @@ NSString *key;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    id appDelegate = [(id)[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
     //nameField.delegate = self;
     //passwordField.delegate = self;
 }
